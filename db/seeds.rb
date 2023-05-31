@@ -3,7 +3,7 @@ puts 'Cleaning database...'
 Restaurant.destroy_all
 puts 'Starting to create restaurants...'
 5.times do
-  restaurant = Restaurant.new({
+  restaurant = Restaurant.create({
     name: Faker::Restaurant.name,
     address: Faker::Address.full_address,
     category: %w(chinese italian japanese french belgian).sample
